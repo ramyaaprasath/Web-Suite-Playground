@@ -1,0 +1,89 @@
+h1 { 
+    font-weight: 100;
+    font-size: 4em;
+    position:absolute;
+    top:200px;
+    left:100px;
+   }
+   
+   #text1 { 
+    width: 600px; 
+    margin-top: 50px; 
+    text-align: center; 
+    font-family: 'Bahnschrift Light'; 
+  }
+   
+   div.eight-ball {
+     background-color: black;
+     border: 1px solid rgba(0, 0, 0, 0);
+     border-radius: 50%;
+     width: 300px;
+     height: 300px;
+     margin-right: 200px;
+     margin-bottom: 30px;
+     margin-top: 30px;
+     position: absolute;
+     left:800px;
+     top:150px;
+    }
+   
+   
+   p#eight {
+     font-size: 5em;
+     margin: 20% auto;
+     color: black;
+     font-family: "Bahnschrift Light";
+   }
+
+   div.answer {
+   background-color: white;
+   border: 1px solid white;
+   border-radius: 50%;
+   width: 50%;
+   height: 50%;
+   margin: 25% auto;
+   }
+
+   p#answer {
+     padding: 20px;
+     color: black;
+     letter-spacing: 2px;
+     font-size:18px;
+     font-family: "Bahnschrift Light";
+   }
+   
+   #question {
+     height:50px;
+     width: 400px;
+     font-size:30px;
+     position:absolute;
+    top:380px;
+    left:100px;
+    font-family: "Bahnschrift Light";
+   }
+   #ask
+   {
+   height:50px;
+   border:5px;
+   border-color: rgb(176, 250, 255);
+   width: 100px;
+   font-size:22px;
+   position:absolute;
+   top:380px;
+   left:500px;
+   font-family: "Bahnschrift Light"; 
+   background-color: rgb(176, 250, 255);  
+   }
+   
+   #text2 {
+     font-size: 20px;
+    position:absolute;
+    top:300px;
+    left:100px;
+   }
+
+   body{
+       background-image: url(https://i.pinimg.com/originals/a1/9b/36/a19b36b3dedd8674821b1df3235555d2.jpg);
+       padding:27px;
+   }
+   
