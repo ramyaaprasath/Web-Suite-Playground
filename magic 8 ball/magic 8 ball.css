@@ -86,4 +86,10 @@ h1 {
        background-image: url(https://i.pinimg.com/originals/a1/9b/36/a19b36b3dedd8674821b1df3235555d2.jpg);
        padding:27px;
    }
+   footer{
+    text-align: center;
+    margin-top: 43%;
+    color :rgba(0, 0, 0, 0.329);
+}
+   
    
