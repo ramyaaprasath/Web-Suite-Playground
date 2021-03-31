@@ -10,7 +10,7 @@ img{
     width: 400px;
     height: 250px;
     float:right;
-    margin-top: 14%;
+    margin-top: 13.5%;
     margin-right: 20%;
     font-family:"Nunito Sans";
     font-weight: 1em;
@@ -20,6 +20,7 @@ img{
     text-align: left;
 }
 .btn {
+    color: white;
     overflow: hidden;
     letter-spacing: 2px;
     transition: 0.3s ease;
