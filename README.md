@@ -1,2 +1,3 @@
-# js-practice
-- has multiple simple trial projects
+# Basics
+- has multiple simple projects
+- HTML CSS JS
