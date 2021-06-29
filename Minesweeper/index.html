@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>Minesweeper</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="R.png" type="image/icon type">
+    </head>
+<body>
+<form class="game">
+    <input class="action-type" id="dig" type="radio" name="actionType" checked>
+    <label class="action-type" for="dig">DIG</label>
+    <input class="action-type" id="mark" type="radio" name="actionType">
+    <label class="action-type" for="mark">MARK</label>
+    <div class="board">
+        <input id="field-checkbox1" type="checkbox">
+        <input id="field-checkbox2" type="checkbox">
+        <input id="field-checkbox3" type="checkbox">
+        <input id="field-checkbox4" type="checkbox">
+        <input id="field-checkbox5" type="checkbox">
+        <input id="field-checkbox6" type="checkbox">
+        <input id="field-checkbox7" type="checkbox">
+        <input id="field-checkbox8" type="checkbox">
+        <input id="field-checkbox9" type="checkbox">
+        <input id="field-checkbox10" type="checkbox">
+        <input id="field-checkbox11" type="checkbox">
+        <input id="field-checkbox12" type="checkbox">
+        <input id="field-checkbox13" type="checkbox">
+        <input id="field-checkbox14" type="checkbox">
+        <input id="field-checkbox15" type="checkbox">
+        <input id="field-checkbox16" type="checkbox">
+        <input id="field-checkbox17" type="checkbox">
+        <input id="field-checkbox18" type="checkbox">
+        <input id="field-checkbox19" type="checkbox">
+        <input id="field-checkbox20" type="checkbox">
+        <input id="field-checkbox21" type="checkbox">
+        <input id="field-checkbox22" type="checkbox">
+        <input id="field-checkbox23" type="checkbox">
+        <input id="field-checkbox24" type="checkbox">
+        <input id="field-checkbox25" type="checkbox">
+        <input id="flag-checkbox1" type="checkbox">
+        <input id="flag-checkbox2" type="checkbox">
+        <input id="flag-checkbox3" type="checkbox">
+        <input id="flag-checkbox4" type="checkbox">
+        <input id="flag-checkbox5" type="checkbox">
+        <input id="flag-checkbox6" type="checkbox">
+        <input id="flag-checkbox7" type="checkbox">
+        <input id="flag-checkbox8" type="checkbox">
+        <input id="flag-checkbox9" type="checkbox">
+        <input id="flag-checkbox10" type="checkbox">
+        <input id="flag-checkbox11" type="checkbox">
+        <input id="flag-checkbox12" type="checkbox">
+        <input id="flag-checkbox13" type="checkbox">
+        <input id="flag-checkbox14" type="checkbox">
+        <input id="flag-checkbox15" type="checkbox">
+        <input id="flag-checkbox16" type="checkbox">
+        <input id="flag-checkbox17" type="checkbox">
+        <input id="flag-checkbox18" type="checkbox">
+        <input id="flag-checkbox19" type="checkbox">
+        <input id="flag-checkbox20" type="checkbox">
+        <input id="flag-checkbox21" type="checkbox">
+        <input id="flag-checkbox22" type="checkbox">
+        <input id="flag-checkbox23" type="checkbox">
+        <input id="flag-checkbox24" type="checkbox">
+        <input id="flag-checkbox25" type="checkbox">
+        <div class="layers">
+            <div class="grid-layer fields-layer">
+                <label id="field1" for="field-checkbox1"></label>
+                <label id="field2" for="field-checkbox2"></label>
+                <label id="field3" for="field-checkbox3"></label>
+                <label id="field4" for="field-checkbox4"></label>
+                <label id="field5" for="field-checkbox5"></label>
+                <label id="field6" for="field-checkbox6"></label>
+                <label id="field7" for="field-checkbox7"></label>
+                <label id="field8" for="field-checkbox8"></label>
+                <label id="field9" for="field-checkbox9"></label>
+                <label id="field10" for="field-checkbox10"></label>
+                <label id="field11" for="field-checkbox11"></label>
+                <label id="field12" for="field-checkbox12"></label>
+                <label id="field13" for="field-checkbox13"></label>
+                <label id="field14" for="field-checkbox14"></label>
+                <label id="field15" for="field-checkbox15"></label>
+                <label id="field16" for="field-checkbox16"></label>
+                <label id="field17" for="field-checkbox17"></label>
+                <label id="field18" for="field-checkbox18"></label>
+                <label id="field19" for="field-checkbox19"></label>
+                <label id="field20" for="field-checkbox20"></label>
+                <label id="field21" for="field-checkbox21"></label>
+                <label id="field22" for="field-checkbox22"></label>
+                <label id="field23" for="field-checkbox23"></label>
+                <label id="field24" for="field-checkbox24"></label>
+                <label id="field25" for="field-checkbox25"></label>
+            </div>
+            <div class="grid-layer flags-layer">
+                <label id="flag1" for="flag-checkbox1"></label>
+                <label id="flag2" for="flag-checkbox2"></label>
+                <label id="flag3" for="flag-checkbox3"></label>
+                <label id="flag4" for="flag-checkbox4"></label>
+                <label id="flag5" for="flag-checkbox5"></label>
+                <label id="flag6" for="flag-checkbox6"></label>
+                <label id="flag7" for="flag-checkbox7"></label>
+                <label id="flag8" for="flag-checkbox8"></label>
+                <label id="flag9" for="flag-checkbox9"></label>
+                <label id="flag10" for="flag-checkbox10"></label>
+                <label id="flag11" for="flag-checkbox11"></label>
+                <label id="flag12" for="flag-checkbox12"></label>
+                <label id="flag13" for="flag-checkbox13"></label>
+                <label id="flag14" for="flag-checkbox14"></label>
+                <label id="flag15" for="flag-checkbox15"></label>
+                <label id="flag16" for="flag-checkbox16"></label>
+                <label id="flag17" for="flag-checkbox17"></label>
+                <label id="flag18" for="flag-checkbox18"></label>
+                <label id="flag19" for="flag-checkbox19"></label>
+                <label id="flag20" for="flag-checkbox20"></label>
+                <label id="flag21" for="flag-checkbox21"></label>
+                <label id="flag22" for="flag-checkbox22"></label>
+                <label id="flag23" for="flag-checkbox23"></label>
+                <label id="flag24" for="flag-checkbox24"></label>
+                <label id="flag25" for="flag-checkbox25"></label>
+            </div>
+            <div class="finish-layer">
+                <div class="loser-screen">
+                    <button type="reset">Uh... :( One more time?</button>
+                </div>
+                <div class="winner-screen">
+                    <button type="reset">Yay! One more time!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="game-stats">
+        <div class="mines"></div>
+        <div class="fields"></div>
+    </div>
+</form>
+</body>
+</html>
