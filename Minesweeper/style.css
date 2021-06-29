@@ -1,0 +1,1164 @@
+@charset "UTF-8";
+/***************************/
+/********* COLORS **********/
+/***************************/
+/****************************/
+/******* BASIC STYLES *******/
+/****************************/
+input {
+  display: none;
+}
+
+html {
+  overflow-x: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.game {
+  text-align: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding-top: 50px;
+  background: #2b3242;
+}
+
+.board {
+  width: 260px;
+  margin: 10px auto;
+  position: relative;
+}
+
+.layers {
+  height: 260px;
+}
+
+.grid-layer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 260px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.grid-layer label {
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 1px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: radial-gradient(#80D5FD, #6AA3E6);
+  color: #748F28;
+}
+
+/****************************/
+/********** FIELDS **********/
+/****************************/
+#field-checkbox1:checked ~ .layers .fields-layer #field1 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox2:checked ~ .layers .fields-layer #field2 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox3:checked ~ .layers .fields-layer #field3 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox4:checked ~ .layers .fields-layer #field4 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox5:checked ~ .layers .fields-layer #field5 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox6:checked ~ .layers .fields-layer #field6 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox7:checked ~ .layers .fields-layer #field7 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox8:checked ~ .layers .fields-layer #field8 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox9:checked ~ .layers .fields-layer #field9 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox10:checked ~ .layers .fields-layer #field10 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox11:checked ~ .layers .fields-layer #field11 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox12:checked ~ .layers .fields-layer #field12 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox13:checked ~ .layers .fields-layer #field13 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox14:checked ~ .layers .fields-layer #field14 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox15:checked ~ .layers .fields-layer #field15 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox16:checked ~ .layers .fields-layer #field16 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox17:checked ~ .layers .fields-layer #field17 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox18:checked ~ .layers .fields-layer #field18 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox19:checked ~ .layers .fields-layer #field19 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox20:checked ~ .layers .fields-layer #field20 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox21:checked ~ .layers .fields-layer #field21 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox22:checked ~ .layers .fields-layer #field22 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox23:checked ~ .layers .fields-layer #field23 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox24:checked ~ .layers .fields-layer #field24 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#field-checkbox25:checked ~ .layers .fields-layer #field25 {
+  background: radial-gradient(#fff, #C2C3C5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/*********************************/
+/********* MARK AND DIG **********/
+/*********************************/
+.action-type + label {
+  border-radius: 20px;
+  margin: 0 5px;
+  border: 1px solid black;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  width: 80px;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity 0.4s;
+  background: radial-gradient(#80D5FD, #6AA3E6);
+}
+.action-type + label:hover {
+  opacity: 0.8;
+}
+.action-type:checked + label {
+  font-weight: bold;
+  opacity: 1;
+}
+
+.flags-layer label:after {
+  content: "?";
+}
+
+.board #mark:checked ~ .fields-layer label {
+  pointer-events: none;
+}
+.board .flags-layer {
+  visibility: hidden;
+}
+.board .flags-layer label {
+  visibility: hidden;
+}
+#mark:checked ~ .board .flags-layer label {
+  visibility: visible;
+}
+#dig:checked ~ .board .flags-layer label {
+  pointer-events: none;
+}
+
+#flag-checkbox1:checked ~ .layers .flags-layer #flag1 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox1:checked ~ .layers .flags-layer #flag1:after {
+  content: "💣";
+}
+
+#field-checkbox1:checked ~ .layers .fields-layer #field1 {
+  z-index: 5;
+}
+
+#flag-checkbox1:checked ~ .layers .fields-layer #field1 {
+  pointer-events: none;
+}
+
+#field-checkbox1:checked ~ .layers .flags-layer #flag1 {
+  pointer-events: none;
+}
+
+#flag-checkbox2:checked ~ .layers .flags-layer #flag2 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox2:checked ~ .layers .flags-layer #flag2:after {
+  content: "💣";
+}
+
+#field-checkbox2:checked ~ .layers .fields-layer #field2 {
+  z-index: 5;
+}
+
+#flag-checkbox2:checked ~ .layers .fields-layer #field2 {
+  pointer-events: none;
+}
+
+#field-checkbox2:checked ~ .layers .flags-layer #flag2 {
+  pointer-events: none;
+}
+
+#flag-checkbox3:checked ~ .layers .flags-layer #flag3 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox3:checked ~ .layers .flags-layer #flag3:after {
+  content: "💣";
+}
+
+#field-checkbox3:checked ~ .layers .fields-layer #field3 {
+  z-index: 5;
+}
+
+#flag-checkbox3:checked ~ .layers .fields-layer #field3 {
+  pointer-events: none;
+}
+
+#field-checkbox3:checked ~ .layers .flags-layer #flag3 {
+  pointer-events: none;
+}
+
+#flag-checkbox4:checked ~ .layers .flags-layer #flag4 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox4:checked ~ .layers .flags-layer #flag4:after {
+  content: "💣";
+}
+
+#field-checkbox4:checked ~ .layers .fields-layer #field4 {
+  z-index: 5;
+}
+
+#flag-checkbox4:checked ~ .layers .fields-layer #field4 {
+  pointer-events: none;
+}
+
+#field-checkbox4:checked ~ .layers .flags-layer #flag4 {
+  pointer-events: none;
+}
+
+#flag-checkbox5:checked ~ .layers .flags-layer #flag5 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox5:checked ~ .layers .flags-layer #flag5:after {
+  content: "💣";
+}
+
+#field-checkbox5:checked ~ .layers .fields-layer #field5 {
+  z-index: 5;
+}
+
+#flag-checkbox5:checked ~ .layers .fields-layer #field5 {
+  pointer-events: none;
+}
+
+#field-checkbox5:checked ~ .layers .flags-layer #flag5 {
+  pointer-events: none;
+}
+
+#flag-checkbox6:checked ~ .layers .flags-layer #flag6 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox6:checked ~ .layers .flags-layer #flag6:after {
+  content: "💣";
+}
+
+#field-checkbox6:checked ~ .layers .fields-layer #field6 {
+  z-index: 5;
+}
+
+#flag-checkbox6:checked ~ .layers .fields-layer #field6 {
+  pointer-events: none;
+}
+
+#field-checkbox6:checked ~ .layers .flags-layer #flag6 {
+  pointer-events: none;
+}
+
+#flag-checkbox7:checked ~ .layers .flags-layer #flag7 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox7:checked ~ .layers .flags-layer #flag7:after {
+  content: "💣";
+}
+
+#field-checkbox7:checked ~ .layers .fields-layer #field7 {
+  z-index: 5;
+}
+
+#flag-checkbox7:checked ~ .layers .fields-layer #field7 {
+  pointer-events: none;
+}
+
+#field-checkbox7:checked ~ .layers .flags-layer #flag7 {
+  pointer-events: none;
+}
+
+#flag-checkbox8:checked ~ .layers .flags-layer #flag8 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox8:checked ~ .layers .flags-layer #flag8:after {
+  content: "💣";
+}
+
+#field-checkbox8:checked ~ .layers .fields-layer #field8 {
+  z-index: 5;
+}
+
+#flag-checkbox8:checked ~ .layers .fields-layer #field8 {
+  pointer-events: none;
+}
+
+#field-checkbox8:checked ~ .layers .flags-layer #flag8 {
+  pointer-events: none;
+}
+
+#flag-checkbox9:checked ~ .layers .flags-layer #flag9 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox9:checked ~ .layers .flags-layer #flag9:after {
+  content: "💣";
+}
+
+#field-checkbox9:checked ~ .layers .fields-layer #field9 {
+  z-index: 5;
+}
+
+#flag-checkbox9:checked ~ .layers .fields-layer #field9 {
+  pointer-events: none;
+}
+
+#field-checkbox9:checked ~ .layers .flags-layer #flag9 {
+  pointer-events: none;
+}
+
+#flag-checkbox10:checked ~ .layers .flags-layer #flag10 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox10:checked ~ .layers .flags-layer #flag10:after {
+  content: "💣";
+}
+
+#field-checkbox10:checked ~ .layers .fields-layer #field10 {
+  z-index: 5;
+}
+
+#flag-checkbox10:checked ~ .layers .fields-layer #field10 {
+  pointer-events: none;
+}
+
+#field-checkbox10:checked ~ .layers .flags-layer #flag10 {
+  pointer-events: none;
+}
+
+#flag-checkbox11:checked ~ .layers .flags-layer #flag11 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox11:checked ~ .layers .flags-layer #flag11:after {
+  content: "💣";
+}
+
+#field-checkbox11:checked ~ .layers .fields-layer #field11 {
+  z-index: 5;
+}
+
+#flag-checkbox11:checked ~ .layers .fields-layer #field11 {
+  pointer-events: none;
+}
+
+#field-checkbox11:checked ~ .layers .flags-layer #flag11 {
+  pointer-events: none;
+}
+
+#flag-checkbox12:checked ~ .layers .flags-layer #flag12 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox12:checked ~ .layers .flags-layer #flag12:after {
+  content: "💣";
+}
+
+#field-checkbox12:checked ~ .layers .fields-layer #field12 {
+  z-index: 5;
+}
+
+#flag-checkbox12:checked ~ .layers .fields-layer #field12 {
+  pointer-events: none;
+}
+
+#field-checkbox12:checked ~ .layers .flags-layer #flag12 {
+  pointer-events: none;
+}
+
+#flag-checkbox13:checked ~ .layers .flags-layer #flag13 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox13:checked ~ .layers .flags-layer #flag13:after {
+  content: "💣";
+}
+
+#field-checkbox13:checked ~ .layers .fields-layer #field13 {
+  z-index: 5;
+}
+
+#flag-checkbox13:checked ~ .layers .fields-layer #field13 {
+  pointer-events: none;
+}
+
+#field-checkbox13:checked ~ .layers .flags-layer #flag13 {
+  pointer-events: none;
+}
+
+#flag-checkbox14:checked ~ .layers .flags-layer #flag14 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox14:checked ~ .layers .flags-layer #flag14:after {
+  content: "💣";
+}
+
+#field-checkbox14:checked ~ .layers .fields-layer #field14 {
+  z-index: 5;
+}
+
+#flag-checkbox14:checked ~ .layers .fields-layer #field14 {
+  pointer-events: none;
+}
+
+#field-checkbox14:checked ~ .layers .flags-layer #flag14 {
+  pointer-events: none;
+}
+
+#flag-checkbox15:checked ~ .layers .flags-layer #flag15 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox15:checked ~ .layers .flags-layer #flag15:after {
+  content: "💣";
+}
+
+#field-checkbox15:checked ~ .layers .fields-layer #field15 {
+  z-index: 5;
+}
+
+#flag-checkbox15:checked ~ .layers .fields-layer #field15 {
+  pointer-events: none;
+}
+
+#field-checkbox15:checked ~ .layers .flags-layer #flag15 {
+  pointer-events: none;
+}
+
+#flag-checkbox16:checked ~ .layers .flags-layer #flag16 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox16:checked ~ .layers .flags-layer #flag16:after {
+  content: "💣";
+}
+
+#field-checkbox16:checked ~ .layers .fields-layer #field16 {
+  z-index: 5;
+}
+
+#flag-checkbox16:checked ~ .layers .fields-layer #field16 {
+  pointer-events: none;
+}
+
+#field-checkbox16:checked ~ .layers .flags-layer #flag16 {
+  pointer-events: none;
+}
+
+#flag-checkbox17:checked ~ .layers .flags-layer #flag17 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox17:checked ~ .layers .flags-layer #flag17:after {
+  content: "💣";
+}
+
+#field-checkbox17:checked ~ .layers .fields-layer #field17 {
+  z-index: 5;
+}
+
+#flag-checkbox17:checked ~ .layers .fields-layer #field17 {
+  pointer-events: none;
+}
+
+#field-checkbox17:checked ~ .layers .flags-layer #flag17 {
+  pointer-events: none;
+}
+
+#flag-checkbox18:checked ~ .layers .flags-layer #flag18 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox18:checked ~ .layers .flags-layer #flag18:after {
+  content: "💣";
+}
+
+#field-checkbox18:checked ~ .layers .fields-layer #field18 {
+  z-index: 5;
+}
+
+#flag-checkbox18:checked ~ .layers .fields-layer #field18 {
+  pointer-events: none;
+}
+
+#field-checkbox18:checked ~ .layers .flags-layer #flag18 {
+  pointer-events: none;
+}
+
+#flag-checkbox19:checked ~ .layers .flags-layer #flag19 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox19:checked ~ .layers .flags-layer #flag19:after {
+  content: "💣";
+}
+
+#field-checkbox19:checked ~ .layers .fields-layer #field19 {
+  z-index: 5;
+}
+
+#flag-checkbox19:checked ~ .layers .fields-layer #field19 {
+  pointer-events: none;
+}
+
+#field-checkbox19:checked ~ .layers .flags-layer #flag19 {
+  pointer-events: none;
+}
+
+#flag-checkbox20:checked ~ .layers .flags-layer #flag20 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox20:checked ~ .layers .flags-layer #flag20:after {
+  content: "💣";
+}
+
+#field-checkbox20:checked ~ .layers .fields-layer #field20 {
+  z-index: 5;
+}
+
+#flag-checkbox20:checked ~ .layers .fields-layer #field20 {
+  pointer-events: none;
+}
+
+#field-checkbox20:checked ~ .layers .flags-layer #flag20 {
+  pointer-events: none;
+}
+
+#flag-checkbox21:checked ~ .layers .flags-layer #flag21 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox21:checked ~ .layers .flags-layer #flag21:after {
+  content: "💣";
+}
+
+#field-checkbox21:checked ~ .layers .fields-layer #field21 {
+  z-index: 5;
+}
+
+#flag-checkbox21:checked ~ .layers .fields-layer #field21 {
+  pointer-events: none;
+}
+
+#field-checkbox21:checked ~ .layers .flags-layer #flag21 {
+  pointer-events: none;
+}
+
+#flag-checkbox22:checked ~ .layers .flags-layer #flag22 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox22:checked ~ .layers .flags-layer #flag22:after {
+  content: "💣";
+}
+
+#field-checkbox22:checked ~ .layers .fields-layer #field22 {
+  z-index: 5;
+}
+
+#flag-checkbox22:checked ~ .layers .fields-layer #field22 {
+  pointer-events: none;
+}
+
+#field-checkbox22:checked ~ .layers .flags-layer #flag22 {
+  pointer-events: none;
+}
+
+#flag-checkbox23:checked ~ .layers .flags-layer #flag23 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox23:checked ~ .layers .flags-layer #flag23:after {
+  content: "💣";
+}
+
+#field-checkbox23:checked ~ .layers .fields-layer #field23 {
+  z-index: 5;
+}
+
+#flag-checkbox23:checked ~ .layers .fields-layer #field23 {
+  pointer-events: none;
+}
+
+#field-checkbox23:checked ~ .layers .flags-layer #flag23 {
+  pointer-events: none;
+}
+
+#flag-checkbox24:checked ~ .layers .flags-layer #flag24 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox24:checked ~ .layers .flags-layer #flag24:after {
+  content: "💣";
+}
+
+#field-checkbox24:checked ~ .layers .fields-layer #field24 {
+  z-index: 5;
+}
+
+#flag-checkbox24:checked ~ .layers .fields-layer #field24 {
+  pointer-events: none;
+}
+
+#field-checkbox24:checked ~ .layers .flags-layer #flag24 {
+  pointer-events: none;
+}
+
+#flag-checkbox25:checked ~ .layers .flags-layer #flag25 {
+  background: radial-gradient(#E7C04B, #FBDD42);
+  visibility: visible !important;
+}
+#flag-checkbox25:checked ~ .layers .flags-layer #flag25:after {
+  content: "💣";
+}
+
+#field-checkbox25:checked ~ .layers .fields-layer #field25 {
+  z-index: 5;
+}
+
+#flag-checkbox25:checked ~ .layers .fields-layer #field25 {
+  pointer-events: none;
+}
+
+#field-checkbox25:checked ~ .layers .flags-layer #flag25 {
+  pointer-events: none;
+}
+
+/*********************************/
+/********* WIN AND LOSE **********/
+/*********************************/
+.loser-screen, .winner-screen {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+}
+.loser-screen button, .winner-screen button {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: none;
+  color: white;
+  font-size: 20px;
+}
+
+.winner-screen {
+  background: rgba(0, 255, 0, 0.7);
+}
+.winner-screen button {
+  color: black;
+}
+
+#field-checkbox5:checked ~ .layers .fields-layer #field5 {
+  background: radial-gradient(#c50900, #d50004);
+}
+
+#field-checkbox5:checked ~ .layers .finish-layer .loser-screen {
+  visibility: visible;
+  z-index: 10;
+}
+
+#field-checkbox11:checked ~ .layers .fields-layer #field11 {
+  background: radial-gradient(#c50900, #d50004);
+}
+
+#field-checkbox11:checked ~ .layers .finish-layer .loser-screen {
+  visibility: visible;
+  z-index: 10;
+}
+
+#field-checkbox12:checked ~ .layers .fields-layer #field12 {
+  background: radial-gradient(#c50900, #d50004);
+}
+
+#field-checkbox12:checked ~ .layers .finish-layer .loser-screen {
+  visibility: visible;
+  z-index: 10;
+}
+
+#field-checkbox15:checked ~ .layers .fields-layer #field15 {
+  background: radial-gradient(#c50900, #d50004);
+}
+
+#field-checkbox15:checked ~ .layers .finish-layer .loser-screen {
+  visibility: visible;
+  z-index: 10;
+}
+
+#field-checkbox18:checked ~ .layers .fields-layer #field18 {
+  background: radial-gradient(#c50900, #d50004);
+}
+
+#field-checkbox18:checked ~ .layers .finish-layer .loser-screen {
+  visibility: visible;
+  z-index: 10;
+}
+
+#field-checkbox20:checked ~ .layers .fields-layer #field20 {
+  background: radial-gradient(#c50900, #d50004);
+}
+
+#field-checkbox20:checked ~ .layers .finish-layer .loser-screen {
+  visibility: visible;
+  z-index: 10;
+}
+
+#field-checkbox23:checked ~ .layers .fields-layer #field23 {
+  background: radial-gradient(#c50900, #d50004);
+}
+
+#field-checkbox23:checked ~ .layers .finish-layer .loser-screen {
+  visibility: visible;
+  z-index: 10;
+}
+
+#field-checkbox24:checked ~ .layers .fields-layer #field24 {
+  background: radial-gradient(#c50900, #d50004);
+}
+
+#field-checkbox24:checked ~ .layers .finish-layer .loser-screen {
+  visibility: visible;
+  z-index: 10;
+}
+
+#field-checkbox25:checked ~ .layers .fields-layer #field25 {
+  background: radial-gradient(#c50900, #d50004);
+}
+
+#field-checkbox25:checked ~ .layers .finish-layer .loser-screen {
+  visibility: visible;
+  z-index: 10;
+}
+
+#field-checkbox1:checked ~ #field-checkbox2:checked ~ #field-checkbox3:checked ~ #field-checkbox4:checked ~ #field-checkbox6:checked ~ #field-checkbox7:checked ~ #field-checkbox8:checked ~ #field-checkbox9:checked ~ #field-checkbox10:checked ~ #field-checkbox13:checked ~ #field-checkbox14:checked ~ #field-checkbox16:checked ~ #field-checkbox17:checked ~ #field-checkbox19:checked ~ #field-checkbox21:checked ~ #field-checkbox22:checked ~ .layers .finish-layer .winner-screen {
+  visibility: visible;
+  z-index: 10;
+}
+
+/************************************/
+/********* HINTS IN FIELDS **********/
+/************************************/
+#field-checkbox1:checked ~ .layers .fields-layer #field1:after {
+  content: "0";
+}
+
+#field-checkbox2:checked ~ .layers .fields-layer #field2:after {
+  content: "0";
+}
+
+#field-checkbox3:checked ~ .layers .fields-layer #field3:after {
+  content: "0";
+}
+
+#field-checkbox4:checked ~ .layers .fields-layer #field4:after {
+  content: "1";
+}
+
+#field-checkbox6:checked ~ .layers .fields-layer #field6:after {
+  content: "2";
+}
+
+#field-checkbox7:checked ~ .layers .fields-layer #field7:after {
+  content: "2";
+}
+
+#field-checkbox8:checked ~ .layers .fields-layer #field8:after {
+  content: "1";
+}
+
+#field-checkbox9:checked ~ .layers .fields-layer #field9:after {
+  content: "2";
+}
+
+#field-checkbox10:checked ~ .layers .fields-layer #field10:after {
+  content: "2";
+}
+
+#field-checkbox13:checked ~ .layers .fields-layer #field13:after {
+  content: "2";
+}
+
+#field-checkbox14:checked ~ .layers .fields-layer #field14:after {
+  content: "3";
+}
+
+#field-checkbox16:checked ~ .layers .fields-layer #field16:after {
+  content: "2";
+}
+
+#field-checkbox17:checked ~ .layers .fields-layer #field17:after {
+  content: "4";
+}
+
+#field-checkbox19:checked ~ .layers .fields-layer #field19:after {
+  content: "6";
+}
+
+#field-checkbox21:checked ~ .layers .fields-layer #field21:after {
+  content: "0";
+}
+
+#field-checkbox22:checked ~ .layers .fields-layer #field22:after {
+  content: "2";
+}
+
+/*****************************/
+/********* COUNTERS **********/
+/*****************************/
+body {
+  counter-reset: markedFieldsCount uncoveredFieldsCount;
+}
+
+#flag-checkbox1:checked ~ .layers .flags-layer #flag1 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox1:checked ~ .layers .fields-layer #field1 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox2:checked ~ .layers .flags-layer #flag2 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox2:checked ~ .layers .fields-layer #field2 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox3:checked ~ .layers .flags-layer #flag3 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox3:checked ~ .layers .fields-layer #field3 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox4:checked ~ .layers .flags-layer #flag4 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox4:checked ~ .layers .fields-layer #field4 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox5:checked ~ .layers .flags-layer #flag5 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox5:checked ~ .layers .fields-layer #field5 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox6:checked ~ .layers .flags-layer #flag6 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox6:checked ~ .layers .fields-layer #field6 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox7:checked ~ .layers .flags-layer #flag7 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox7:checked ~ .layers .fields-layer #field7 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox8:checked ~ .layers .flags-layer #flag8 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox8:checked ~ .layers .fields-layer #field8 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox9:checked ~ .layers .flags-layer #flag9 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox9:checked ~ .layers .fields-layer #field9 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox10:checked ~ .layers .flags-layer #flag10 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox10:checked ~ .layers .fields-layer #field10 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox11:checked ~ .layers .flags-layer #flag11 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox11:checked ~ .layers .fields-layer #field11 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox12:checked ~ .layers .flags-layer #flag12 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox12:checked ~ .layers .fields-layer #field12 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox13:checked ~ .layers .flags-layer #flag13 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox13:checked ~ .layers .fields-layer #field13 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox14:checked ~ .layers .flags-layer #flag14 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox14:checked ~ .layers .fields-layer #field14 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox15:checked ~ .layers .flags-layer #flag15 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox15:checked ~ .layers .fields-layer #field15 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox16:checked ~ .layers .flags-layer #flag16 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox16:checked ~ .layers .fields-layer #field16 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox17:checked ~ .layers .flags-layer #flag17 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox17:checked ~ .layers .fields-layer #field17 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox18:checked ~ .layers .flags-layer #flag18 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox18:checked ~ .layers .fields-layer #field18 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox19:checked ~ .layers .flags-layer #flag19 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox19:checked ~ .layers .fields-layer #field19 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox20:checked ~ .layers .flags-layer #flag20 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox20:checked ~ .layers .fields-layer #field20 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox21:checked ~ .layers .flags-layer #flag21 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox21:checked ~ .layers .fields-layer #field21 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox22:checked ~ .layers .flags-layer #flag22 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox22:checked ~ .layers .fields-layer #field22 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox23:checked ~ .layers .flags-layer #flag23 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox23:checked ~ .layers .fields-layer #field23 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox24:checked ~ .layers .flags-layer #flag24 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox24:checked ~ .layers .fields-layer #field24 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+#flag-checkbox25:checked ~ .layers .flags-layer #flag25 {
+  counter-increment: markedFieldsCount;
+}
+
+#field-checkbox25:checked ~ .layers .fields-layer #field25 {
+  counter-increment: uncoveredFieldsCount;
+}
+
+.game-stats {
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  margin: 10px 0;
+}
+.game-stats .fields:after {
+  content: "Uncovered fields: " counter(uncoveredFieldsCount) "/16";
+}
+.game-stats .mines:after {
+  content: "Marked mines: " counter(markedFieldsCount) "/9";
+}
+
+/*# sourceMappingURL=style.css.map */

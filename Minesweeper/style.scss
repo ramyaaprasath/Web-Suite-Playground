@@ -1,0 +1,354 @@
+/***************************/
+/********* COLORS **********/
+/***************************/
+
+
+$deep-blue: #2b3242;
+$blue: #6AA3E6;
+$light-blue: #80D5FD;
+$white: #fff;
+$gray: #C2C3C5;
+$yellow: #E7C04B;
+$light-yellow: #FBDD42;
+$red: #c50900;
+$light-red: #d50004;
+$green: #748F28;
+
+/****************************/
+/******* BASIC STYLES *******/
+/****************************/
+
+input {
+  display: none;
+}
+
+html{
+  overflow-x:none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.game {
+  text-align: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding-top: 50px;
+  background: #2b3242;
+}
+
+.board {
+  width: 260px;
+  margin: 10px auto;
+  position: relative;
+}
+
+.layers {
+  height: 260px;
+}
+
+.grid-layer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 260px;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  label {
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 1px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: radial-gradient($light-blue, $blue);
+    color: $green;
+  }
+}
+
+
+/****************************/
+/********** FIELDS **********/
+/****************************/
+
+
+// it is a normal one-dimension list, line-breaks are only for readability
+// 1 means "bomb", 0 means an empty field
+$fields: 0, 0, 0, 0, 1,
+0, 0, 0, 0, 0,
+1, 1, 0, 0, 1,
+0, 0, 1, 0, 1,
+0, 0, 1, 1, 1;
+
+$fieldsCount: length($fields);
+
+
+@for $i from 1 through $fieldsCount {
+  #field-checkbox#{$i}:checked ~ .layers .fields-layer #field#{$i} {
+    background: radial-gradient(#fff, #C2C3C5);
+    pointer-events: none;
+    z-index: 5;
+  }
+}
+
+/*********************************/
+/********* MARK AND DIG **********/
+/*********************************/
+
+.action-type {
+  & + label {
+    border-radius: 20px;
+    margin: 0 5px;
+    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    width: 80px;
+    display: inline-block;
+    opacity: 0.6;
+    transition: opacity 0.4s;
+    background: radial-gradient($light-blue, $blue);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &:checked + label {
+    font-weight: bold;
+    opacity: 1;
+  }
+}
+
+.flags-layer {
+  label:after {
+    content: '?';
+  }
+}
+
+.board {
+  // disable fields-layer when user wants to mark bombs
+  #mark:checked ~ .fields-layer label {
+    pointer-events: none;
+  }
+
+  .flags-layer {
+    visibility: hidden;
+
+    label {
+      visibility: hidden;
+
+      // show flags-layer if user wants to mark bombs
+      #mark:checked ~ & {
+        visibility: visible;
+      }
+
+      // disable flags-layer if user wants to dig
+      #dig:checked ~ & {
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+@for $i from 1 through $fieldsCount {
+  // marked fields should be always visible
+  #flag-checkbox#{$i}:checked ~ .layers .flags-layer #flag#{$i} {
+    background: radial-gradient($yellow, $light-yellow);
+    visibility: visible !important;
+
+    &:after {
+      content: "💣";
+    }
+  }
+
+  // uncovered fields should be visible above flag-layer
+  #field-checkbox#{$i}:checked ~ .layers .fields-layer #field#{$i} {
+    z-index: 5;
+  }
+
+  // disable field if it is marked as a bomb
+  #flag-checkbox#{$i}:checked ~ .layers .fields-layer #field#{$i} {
+    pointer-events: none;
+  }
+
+  // don't allow to flag a field that is already uncovered
+  #field-checkbox#{$i}:checked ~ .layers .flags-layer #flag#{$i} {
+    pointer-events: none;
+  }
+}
+
+/*********************************/
+/********* WIN AND LOSE **********/
+/*********************************/
+
+.loser-screen, .winner-screen {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+
+  button {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: none;
+    color: white;
+    font-size: 20px;
+  }
+}
+
+.winner-screen {
+  background: rgba(0, 255, 0, 0.7);
+
+  button {
+    color: black;
+  }
+}
+
+$allEmptyFieldsCheckedCombinedSelector: ();
+
+@function hasMine($fieldIndex) {
+  @return nth($fields, $fieldIndex) == 1
+}
+
+@for $i from 1 through $fieldsCount {
+  // create rules only for fields with mines
+  @if hasMine($i) {
+    // the uncovered field should be red if it contains bomb
+    #field-checkbox#{$i}:checked ~ .layers .fields-layer #field#{$i} {
+      background: radial-gradient($red, $light-red)
+    }
+
+    // show Loser Screen if any of the fields with a bomb is uncovered
+    #field-checkbox#{$i}:checked ~ .layers .finish-layer .loser-screen {
+      visibility: visible;
+      z-index: 10;
+    }
+  }
+
+  // build a selector that indicates if all empty fields (without mines) are uncovered
+  @if hasMine($i) == false {
+    $allEmptyFieldsCheckedCombinedSelector: append($allEmptyFieldsCheckedCombinedSelector, unquote('#field-checkbox#{$i}:checked ~ '), space);
+  }
+}
+
+// show Winner Screen if all empty fields (without mines) are uncovered
+#{$allEmptyFieldsCheckedCombinedSelector} .layers .finish-layer .winner-screen {
+  visibility: visible;
+  z-index: 10;
+}
+
+/************************************/
+/********* HINTS IN FIELDS **********/
+/************************************/
+
+$fieldsPerRow: 5;
+
+@function neighborExists($field, $direction) {
+  @if $direction == 'up' {
+    @return $field - $fieldsPerRow > 0
+  }
+
+  @if $direction == 'down' {
+    @return $field + $fieldsPerRow <= length($fields)
+  }
+
+  @if $direction == 'right' {
+    @return $field % $fieldsPerRow != 0
+  }
+
+  @if $direction == 'left' {
+    @return $field % $fieldsPerRow != 1
+  }
+}
+
+@for $i from 1 through length($fields) {
+  $minesAround: 0;
+  @if neighborExists($i, 'up') and hasMine($i - $fieldsPerRow) {
+    $minesAround: $minesAround + 1;
+  }
+  @if neighborExists($i, 'down') and hasMine($i + $fieldsPerRow) {
+    $minesAround: $minesAround + 1;
+  }
+  @if neighborExists($i, 'right') and hasMine($i + 1) {
+    $minesAround: $minesAround + 1;
+  }
+  @if neighborExists($i, 'left') and hasMine($i - 1) {
+    $minesAround: $minesAround + 1;
+  }
+  @if neighborExists($i, 'left') and neighborExists($i - 1, 'up') and hasMine($i - 1 - $fieldsPerRow) {
+    $minesAround: $minesAround + 1;
+  }
+  @if neighborExists($i, 'right') and neighborExists($i + 1, 'up') and hasMine($i + 1 - $fieldsPerRow) {
+    $minesAround: $minesAround + 1;
+  }
+  @if neighborExists($i, 'left') and neighborExists($i - 1, 'down') and hasMine($i - 1 + $fieldsPerRow) {
+    $minesAround: $minesAround + 1;
+  }
+  @if neighborExists($i, 'right') and neighborExists($i + 1, 'down') and hasMine($i + 1 + $fieldsPerRow ) {
+    $minesAround: $minesAround + 1;
+  }
+
+  @if hasMine($i) == false {
+    #field-checkbox#{$i}:checked ~ .layers .fields-layer #field#{$i}:after {
+      content: '' + $minesAround
+    }
+  }
+}
+
+/*****************************/
+/********* COUNTERS **********/
+/*****************************/
+
+$minesCount: 0;
+
+@each $field in $fields {
+  @if $field == 1 {
+    $minesCount: $minesCount + 1
+  }
+}
+
+body {
+  // define two counters with the value set to 0
+  counter-reset: markedFieldsCount uncoveredFieldsCount;
+}
+
+@for $i from 1 through $fieldsCount {
+  #flag-checkbox#{$i}:checked ~ .layers .flags-layer #flag#{$i} {
+    counter-increment: markedFieldsCount
+  }
+
+  #field-checkbox#{$i}:checked ~ .layers .fields-layer #field#{$i} {
+    counter-increment: uncoveredFieldsCount
+  }
+}
+
+.game-stats {
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  margin: 10px 0;
+
+  .fields:after {
+    content: 'Uncovered fields: ' counter(uncoveredFieldsCount) '/' + ($fieldsCount - $minesCount)
+  }
+
+  .mines:after {
+    content: 'Marked mines: ' counter(markedFieldsCount) '/' + $minesCount
+  }
+}
