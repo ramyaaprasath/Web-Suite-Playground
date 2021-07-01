@@ -1,37 +1,21 @@
-/***************************/
-/********* COLORS **********/
-/***************************/
-
-
-$deep-blue: #2b3242;
-$blue: #6AA3E6;
-$light-blue: #80D5FD;
-$white: #fff;
-$gray: #C2C3C5;
-$yellow: #E7C04B;
-$light-yellow: #FBDD42;
-$red: #c50900;
-$light-red: #d50004;
-$green: #748F28;
-
-/****************************/
-/******* BASIC STYLES *******/
-/****************************/
+$dark-color: #000814;
+$primary-color: #003566;
+$secondary-color: #EBF5F7;
+$tertiary-color: #ffd166;
+$wrong-color: #ef476f;
+$right-color: #06d6a0;
 
 input {
   display: none;
 }
 
-html{
-  overflow-x:none;
-}
-
 * {
   box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  color:$secondary-color;
   margin: 0;
   padding: 0;
 }
@@ -41,7 +25,7 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   padding-top: 50px;
-  background: #2b3242;
+  background: $dark-color;
 }
 
 .board {
@@ -64,7 +48,6 @@ body {
 
   label {
     border-radius: 5px;
-    border: 1px solid black;
     margin: 1px;
     width: 50px;
     height: 50px;
@@ -72,21 +55,14 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background: radial-gradient($light-blue, $blue);
-    color: $green;
+    background: $primary-color;
+    color: $right-color;
   }
 }
 
-
-/****************************/
-/********** FIELDS **********/
-/****************************/
-
-
-// it is a normal one-dimension list, line-breaks are only for readability
-// 1 means "bomb", 0 means an empty field
-$fields: 0, 0, 0, 0, 1,
-0, 0, 0, 0, 0,
+$fields: 
+0, 1, 0, 0, 1,
+0, 0, 1, 0, 0,
 1, 1, 0, 0, 1,
 0, 0, 1, 0, 1,
 0, 0, 1, 1, 1;
@@ -96,49 +72,36 @@ $fieldsCount: length($fields);
 
 @for $i from 1 through $fieldsCount {
   #field-checkbox#{$i}:checked ~ .layers .fields-layer #field#{$i} {
-    background: radial-gradient(#fff, #C2C3C5);
+    background: $secondary-color;
     pointer-events: none;
     z-index: 5;
   }
 }
 
-/*********************************/
-/********* MARK AND DIG **********/
-/*********************************/
-
 .action-type {
   & + label {
     border-radius: 20px;
     margin: 0 5px;
-    border: 1px solid black;
-    color: white;
     cursor: pointer;
     padding: 5px;
     width: 80px;
     display: inline-block;
-    opacity: 0.6;
-    transition: opacity 0.4s;
-    background: radial-gradient($light-blue, $blue);
 
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-
-  &:checked + label {
     font-weight: bold;
     opacity: 1;
+    color: $secondary-color;
+    background-color:$right-color;
   }
 }
 
 .flags-layer {
   label:after {
     content: '?';
+    color: $secondary-color;
   }
 }
 
 .board {
-  // disable fields-layer when user wants to mark bombs
   #mark:checked ~ .fields-layer label {
     pointer-events: none;
   }
@@ -149,12 +112,10 @@ $fieldsCount: length($fields);
     label {
       visibility: hidden;
 
-      // show flags-layer if user wants to mark bombs
       #mark:checked ~ & {
         visibility: visible;
       }
 
-      // disable flags-layer if user wants to dig
       #dig:checked ~ & {
         pointer-events: none;
       }
@@ -163,9 +124,8 @@ $fieldsCount: length($fields);
 }
 
 @for $i from 1 through $fieldsCount {
-  // marked fields should be always visible
   #flag-checkbox#{$i}:checked ~ .layers .flags-layer #flag#{$i} {
-    background: radial-gradient($yellow, $light-yellow);
+    background: $tertiary-color;
     visibility: visible !important;
 
     &:after {
@@ -173,28 +133,20 @@ $fieldsCount: length($fields);
     }
   }
 
-  // uncovered fields should be visible above flag-layer
   #field-checkbox#{$i}:checked ~ .layers .fields-layer #field#{$i} {
     z-index: 5;
   }
 
-  // disable field if it is marked as a bomb
   #flag-checkbox#{$i}:checked ~ .layers .fields-layer #field#{$i} {
     pointer-events: none;
   }
 
-  // don't allow to flag a field that is already uncovered
   #field-checkbox#{$i}:checked ~ .layers .flags-layer #flag#{$i} {
     pointer-events: none;
   }
 }
 
-/*********************************/
-/********* WIN AND LOSE **********/
-/*********************************/
-
 .loser-screen, .winner-screen {
-  background: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -207,16 +159,25 @@ $fieldsCount: length($fields);
     height: 100%;
     cursor: pointer;
     background: none;
-    color: white;
+    color: $secondary-color;
     font-size: 20px;
+    border: none;
   }
 }
 
 .winner-screen {
-  background: rgba(0, 255, 0, 0.7);
+  background-color: $right-color;
 
   button {
     color: black;
+  }
+}
+
+.loser-screen{
+  background-color: $wrong-color;
+
+  button {
+    color: white;
   }
 }
 
@@ -231,31 +192,25 @@ $allEmptyFieldsCheckedCombinedSelector: ();
   @if hasMine($i) {
     // the uncovered field should be red if it contains bomb
     #field-checkbox#{$i}:checked ~ .layers .fields-layer #field#{$i} {
-      background: radial-gradient($red, $light-red)
+      background: $wrong-color;
     }
 
-    // show Loser Screen if any of the fields with a bomb is uncovered
     #field-checkbox#{$i}:checked ~ .layers .finish-layer .loser-screen {
       visibility: visible;
       z-index: 10;
     }
   }
 
-  // build a selector that indicates if all empty fields (without mines) are uncovered
   @if hasMine($i) == false {
     $allEmptyFieldsCheckedCombinedSelector: append($allEmptyFieldsCheckedCombinedSelector, unquote('#field-checkbox#{$i}:checked ~ '), space);
   }
 }
 
-// show Winner Screen if all empty fields (without mines) are uncovered
 #{$allEmptyFieldsCheckedCombinedSelector} .layers .finish-layer .winner-screen {
   visibility: visible;
   z-index: 10;
 }
 
-/************************************/
-/********* HINTS IN FIELDS **********/
-/************************************/
 
 $fieldsPerRow: 5;
 
@@ -311,10 +266,6 @@ $fieldsPerRow: 5;
   }
 }
 
-/*****************************/
-/********* COUNTERS **********/
-/*****************************/
-
 $minesCount: 0;
 
 @each $field in $fields {
@@ -324,7 +275,6 @@ $minesCount: 0;
 }
 
 body {
-  // define two counters with the value set to 0
   counter-reset: markedFieldsCount uncoveredFieldsCount;
 }
 
@@ -341,7 +291,7 @@ body {
 .game-stats {
   text-align: center;
   font-size: 12px;
-  color: white;
+  color: light-color;
   margin: 10px 0;
 
   .fields:after {

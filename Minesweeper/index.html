@@ -1,15 +1,16 @@
-<html>
+<html style="overflow:hidden;">
     <head>
         <title>Minesweeper</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="R.png" type="image/icon type">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
     </head>
 <body>
 <form class="game">
     <input class="action-type" id="dig" type="radio" name="actionType" checked>
     <label class="action-type" for="dig">DIG</label>
-    <input class="action-type" id="mark" type="radio" name="actionType">
-    <label class="action-type" for="mark">MARK</label>
     <div class="board">
         <input id="field-checkbox1" type="checkbox">
         <input id="field-checkbox2" type="checkbox">
@@ -118,10 +119,10 @@
             </div>
             <div class="finish-layer">
                 <div class="loser-screen">
-                    <button type="reset">Uh... :( One more time?</button>
+                    <button type="reset">Wrong! Click to Try again!</button>
                 </div>
                 <div class="winner-screen">
-                    <button type="reset">Yay! One more time!</button>
+                    <button type="reset">Yay! Click to Play again!</button>
                 </div>
             </div>
         </div>

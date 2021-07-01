@@ -1,24 +1,16 @@
 @charset "UTF-8";
-/***************************/
-/********* COLORS **********/
-/***************************/
-/****************************/
-/******* BASIC STYLES *******/
-/****************************/
 input {
   display: none;
 }
 
-html {
-  overflow-x: none;
-}
-
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  color: #EBF5F7;
   margin: 0;
   padding: 0;
 }
@@ -28,7 +20,7 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   padding-top: 50px;
-  background: #2b3242;
+  background: #000814;
 }
 
 .board {
@@ -42,228 +34,229 @@ body {
 }
 
 .grid-layer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 260px;
   position: absolute;
   left: 0;
   right: 0;
 }
+
 .grid-layer label {
   border-radius: 5px;
-  border: 1px solid black;
   margin: 1px;
   width: 50px;
   height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
-  background: radial-gradient(#80D5FD, #6AA3E6);
-  color: #748F28;
+  background: #003566;
+  color: #06d6a0;
 }
 
-/****************************/
-/********** FIELDS **********/
-/****************************/
 #field-checkbox1:checked ~ .layers .fields-layer #field1 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox2:checked ~ .layers .fields-layer #field2 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox3:checked ~ .layers .fields-layer #field3 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox4:checked ~ .layers .fields-layer #field4 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox5:checked ~ .layers .fields-layer #field5 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox6:checked ~ .layers .fields-layer #field6 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox7:checked ~ .layers .fields-layer #field7 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox8:checked ~ .layers .fields-layer #field8 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox9:checked ~ .layers .fields-layer #field9 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox10:checked ~ .layers .fields-layer #field10 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox11:checked ~ .layers .fields-layer #field11 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox12:checked ~ .layers .fields-layer #field12 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox13:checked ~ .layers .fields-layer #field13 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox14:checked ~ .layers .fields-layer #field14 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox15:checked ~ .layers .fields-layer #field15 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox16:checked ~ .layers .fields-layer #field16 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox17:checked ~ .layers .fields-layer #field17 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox18:checked ~ .layers .fields-layer #field18 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox19:checked ~ .layers .fields-layer #field19 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox20:checked ~ .layers .fields-layer #field20 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox21:checked ~ .layers .fields-layer #field21 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox22:checked ~ .layers .fields-layer #field22 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox23:checked ~ .layers .fields-layer #field23 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox24:checked ~ .layers .fields-layer #field24 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
 #field-checkbox25:checked ~ .layers .fields-layer #field25 {
-  background: radial-gradient(#fff, #C2C3C5);
+  background: #EBF5F7;
   pointer-events: none;
   z-index: 5;
 }
 
-/*********************************/
-/********* MARK AND DIG **********/
-/*********************************/
 .action-type + label {
   border-radius: 20px;
   margin: 0 5px;
-  border: 1px solid black;
-  color: white;
   cursor: pointer;
   padding: 5px;
   width: 80px;
   display: inline-block;
-  opacity: 0.6;
-  transition: opacity 0.4s;
-  background: radial-gradient(#80D5FD, #6AA3E6);
-}
-.action-type + label:hover {
-  opacity: 0.8;
-}
-.action-type:checked + label {
   font-weight: bold;
   opacity: 1;
+  color: #EBF5F7;
+  background-color: #06d6a0;
 }
 
 .flags-layer label:after {
-  content: "?";
+  content: '?';
+  color: #EBF5F7;
 }
 
 .board #mark:checked ~ .fields-layer label {
   pointer-events: none;
 }
+
 .board .flags-layer {
   visibility: hidden;
 }
+
 .board .flags-layer label {
   visibility: hidden;
 }
+
 #mark:checked ~ .board .flags-layer label {
   visibility: visible;
 }
+
 #dig:checked ~ .board .flags-layer label {
   pointer-events: none;
 }
 
 #flag-checkbox1:checked ~ .layers .flags-layer #flag1 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox1:checked ~ .layers .flags-layer #flag1:after {
   content: "💣";
 }
@@ -281,9 +274,10 @@ body {
 }
 
 #flag-checkbox2:checked ~ .layers .flags-layer #flag2 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox2:checked ~ .layers .flags-layer #flag2:after {
   content: "💣";
 }
@@ -301,9 +295,10 @@ body {
 }
 
 #flag-checkbox3:checked ~ .layers .flags-layer #flag3 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox3:checked ~ .layers .flags-layer #flag3:after {
   content: "💣";
 }
@@ -321,9 +316,10 @@ body {
 }
 
 #flag-checkbox4:checked ~ .layers .flags-layer #flag4 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox4:checked ~ .layers .flags-layer #flag4:after {
   content: "💣";
 }
@@ -341,9 +337,10 @@ body {
 }
 
 #flag-checkbox5:checked ~ .layers .flags-layer #flag5 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox5:checked ~ .layers .flags-layer #flag5:after {
   content: "💣";
 }
@@ -361,9 +358,10 @@ body {
 }
 
 #flag-checkbox6:checked ~ .layers .flags-layer #flag6 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox6:checked ~ .layers .flags-layer #flag6:after {
   content: "💣";
 }
@@ -381,9 +379,10 @@ body {
 }
 
 #flag-checkbox7:checked ~ .layers .flags-layer #flag7 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox7:checked ~ .layers .flags-layer #flag7:after {
   content: "💣";
 }
@@ -401,9 +400,10 @@ body {
 }
 
 #flag-checkbox8:checked ~ .layers .flags-layer #flag8 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox8:checked ~ .layers .flags-layer #flag8:after {
   content: "💣";
 }
@@ -421,9 +421,10 @@ body {
 }
 
 #flag-checkbox9:checked ~ .layers .flags-layer #flag9 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox9:checked ~ .layers .flags-layer #flag9:after {
   content: "💣";
 }
@@ -441,9 +442,10 @@ body {
 }
 
 #flag-checkbox10:checked ~ .layers .flags-layer #flag10 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox10:checked ~ .layers .flags-layer #flag10:after {
   content: "💣";
 }
@@ -461,9 +463,10 @@ body {
 }
 
 #flag-checkbox11:checked ~ .layers .flags-layer #flag11 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox11:checked ~ .layers .flags-layer #flag11:after {
   content: "💣";
 }
@@ -481,9 +484,10 @@ body {
 }
 
 #flag-checkbox12:checked ~ .layers .flags-layer #flag12 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox12:checked ~ .layers .flags-layer #flag12:after {
   content: "💣";
 }
@@ -501,9 +505,10 @@ body {
 }
 
 #flag-checkbox13:checked ~ .layers .flags-layer #flag13 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox13:checked ~ .layers .flags-layer #flag13:after {
   content: "💣";
 }
@@ -521,9 +526,10 @@ body {
 }
 
 #flag-checkbox14:checked ~ .layers .flags-layer #flag14 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox14:checked ~ .layers .flags-layer #flag14:after {
   content: "💣";
 }
@@ -541,9 +547,10 @@ body {
 }
 
 #flag-checkbox15:checked ~ .layers .flags-layer #flag15 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox15:checked ~ .layers .flags-layer #flag15:after {
   content: "💣";
 }
@@ -561,9 +568,10 @@ body {
 }
 
 #flag-checkbox16:checked ~ .layers .flags-layer #flag16 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox16:checked ~ .layers .flags-layer #flag16:after {
   content: "💣";
 }
@@ -581,9 +589,10 @@ body {
 }
 
 #flag-checkbox17:checked ~ .layers .flags-layer #flag17 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox17:checked ~ .layers .flags-layer #flag17:after {
   content: "💣";
 }
@@ -601,9 +610,10 @@ body {
 }
 
 #flag-checkbox18:checked ~ .layers .flags-layer #flag18 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox18:checked ~ .layers .flags-layer #flag18:after {
   content: "💣";
 }
@@ -621,9 +631,10 @@ body {
 }
 
 #flag-checkbox19:checked ~ .layers .flags-layer #flag19 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox19:checked ~ .layers .flags-layer #flag19:after {
   content: "💣";
 }
@@ -641,9 +652,10 @@ body {
 }
 
 #flag-checkbox20:checked ~ .layers .flags-layer #flag20 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox20:checked ~ .layers .flags-layer #flag20:after {
   content: "💣";
 }
@@ -661,9 +673,10 @@ body {
 }
 
 #flag-checkbox21:checked ~ .layers .flags-layer #flag21 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox21:checked ~ .layers .flags-layer #flag21:after {
   content: "💣";
 }
@@ -681,9 +694,10 @@ body {
 }
 
 #flag-checkbox22:checked ~ .layers .flags-layer #flag22 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox22:checked ~ .layers .flags-layer #flag22:after {
   content: "💣";
 }
@@ -701,9 +715,10 @@ body {
 }
 
 #flag-checkbox23:checked ~ .layers .flags-layer #flag23 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox23:checked ~ .layers .flags-layer #flag23:after {
   content: "💣";
 }
@@ -721,9 +736,10 @@ body {
 }
 
 #flag-checkbox24:checked ~ .layers .flags-layer #flag24 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox24:checked ~ .layers .flags-layer #flag24:after {
   content: "💣";
 }
@@ -741,9 +757,10 @@ body {
 }
 
 #flag-checkbox25:checked ~ .layers .flags-layer #flag25 {
-  background: radial-gradient(#E7C04B, #FBDD42);
+  background: #ffd166;
   visibility: visible !important;
 }
+
 #flag-checkbox25:checked ~ .layers .flags-layer #flag25:after {
   content: "💣";
 }
@@ -760,11 +777,7 @@ body {
   pointer-events: none;
 }
 
-/*********************************/
-/********* WIN AND LOSE **********/
-/*********************************/
 .loser-screen, .winner-screen {
-  background: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -772,24 +785,44 @@ body {
   top: 0;
   left: 0;
 }
+
 .loser-screen button, .winner-screen button {
   width: 100%;
   height: 100%;
   cursor: pointer;
   background: none;
-  color: white;
+  color: #EBF5F7;
   font-size: 20px;
+  border: none;
 }
 
 .winner-screen {
-  background: rgba(0, 255, 0, 0.7);
+  background-color: #06d6a0;
 }
+
 .winner-screen button {
   color: black;
 }
 
+.loser-screen {
+  background-color: #ef476f;
+}
+
+.loser-screen button {
+  color: white;
+}
+
+#field-checkbox2:checked ~ .layers .fields-layer #field2 {
+  background: #ef476f;
+}
+
+#field-checkbox2:checked ~ .layers .finish-layer .loser-screen {
+  visibility: visible;
+  z-index: 10;
+}
+
 #field-checkbox5:checked ~ .layers .fields-layer #field5 {
-  background: radial-gradient(#c50900, #d50004);
+  background: #ef476f;
 }
 
 #field-checkbox5:checked ~ .layers .finish-layer .loser-screen {
@@ -797,8 +830,17 @@ body {
   z-index: 10;
 }
 
+#field-checkbox8:checked ~ .layers .fields-layer #field8 {
+  background: #ef476f;
+}
+
+#field-checkbox8:checked ~ .layers .finish-layer .loser-screen {
+  visibility: visible;
+  z-index: 10;
+}
+
 #field-checkbox11:checked ~ .layers .fields-layer #field11 {
-  background: radial-gradient(#c50900, #d50004);
+  background: #ef476f;
 }
 
 #field-checkbox11:checked ~ .layers .finish-layer .loser-screen {
@@ -807,7 +849,7 @@ body {
 }
 
 #field-checkbox12:checked ~ .layers .fields-layer #field12 {
-  background: radial-gradient(#c50900, #d50004);
+  background: #ef476f;
 }
 
 #field-checkbox12:checked ~ .layers .finish-layer .loser-screen {
@@ -816,7 +858,7 @@ body {
 }
 
 #field-checkbox15:checked ~ .layers .fields-layer #field15 {
-  background: radial-gradient(#c50900, #d50004);
+  background: #ef476f;
 }
 
 #field-checkbox15:checked ~ .layers .finish-layer .loser-screen {
@@ -825,7 +867,7 @@ body {
 }
 
 #field-checkbox18:checked ~ .layers .fields-layer #field18 {
-  background: radial-gradient(#c50900, #d50004);
+  background: #ef476f;
 }
 
 #field-checkbox18:checked ~ .layers .finish-layer .loser-screen {
@@ -834,7 +876,7 @@ body {
 }
 
 #field-checkbox20:checked ~ .layers .fields-layer #field20 {
-  background: radial-gradient(#c50900, #d50004);
+  background: #ef476f;
 }
 
 #field-checkbox20:checked ~ .layers .finish-layer .loser-screen {
@@ -843,7 +885,7 @@ body {
 }
 
 #field-checkbox23:checked ~ .layers .fields-layer #field23 {
-  background: radial-gradient(#c50900, #d50004);
+  background: #ef476f;
 }
 
 #field-checkbox23:checked ~ .layers .finish-layer .loser-screen {
@@ -852,7 +894,7 @@ body {
 }
 
 #field-checkbox24:checked ~ .layers .fields-layer #field24 {
-  background: radial-gradient(#c50900, #d50004);
+  background: #ef476f;
 }
 
 #field-checkbox24:checked ~ .layers .finish-layer .loser-screen {
@@ -861,7 +903,7 @@ body {
 }
 
 #field-checkbox25:checked ~ .layers .fields-layer #field25 {
-  background: radial-gradient(#c50900, #d50004);
+  background: #ef476f;
 }
 
 #field-checkbox25:checked ~ .layers .finish-layer .loser-screen {
@@ -869,44 +911,33 @@ body {
   z-index: 10;
 }
 
-#field-checkbox1:checked ~ #field-checkbox2:checked ~ #field-checkbox3:checked ~ #field-checkbox4:checked ~ #field-checkbox6:checked ~ #field-checkbox7:checked ~ #field-checkbox8:checked ~ #field-checkbox9:checked ~ #field-checkbox10:checked ~ #field-checkbox13:checked ~ #field-checkbox14:checked ~ #field-checkbox16:checked ~ #field-checkbox17:checked ~ #field-checkbox19:checked ~ #field-checkbox21:checked ~ #field-checkbox22:checked ~ .layers .finish-layer .winner-screen {
+#field-checkbox1:checked ~ #field-checkbox3:checked ~ #field-checkbox4:checked ~ #field-checkbox6:checked ~ #field-checkbox7:checked ~ #field-checkbox9:checked ~ #field-checkbox10:checked ~ #field-checkbox13:checked ~ #field-checkbox14:checked ~ #field-checkbox16:checked ~ #field-checkbox17:checked ~ #field-checkbox19:checked ~ #field-checkbox21:checked ~ #field-checkbox22:checked ~ .layers .finish-layer .winner-screen {
   visibility: visible;
   z-index: 10;
 }
 
-/************************************/
-/********* HINTS IN FIELDS **********/
-/************************************/
 #field-checkbox1:checked ~ .layers .fields-layer #field1:after {
-  content: "0";
-}
-
-#field-checkbox2:checked ~ .layers .fields-layer #field2:after {
-  content: "0";
+  content: "1";
 }
 
 #field-checkbox3:checked ~ .layers .fields-layer #field3:after {
-  content: "0";
+  content: "2";
 }
 
 #field-checkbox4:checked ~ .layers .fields-layer #field4:after {
-  content: "1";
+  content: "2";
 }
 
 #field-checkbox6:checked ~ .layers .fields-layer #field6:after {
-  content: "2";
+  content: "3";
 }
 
 #field-checkbox7:checked ~ .layers .fields-layer #field7:after {
-  content: "2";
-}
-
-#field-checkbox8:checked ~ .layers .fields-layer #field8:after {
-  content: "1";
+  content: "4";
 }
 
 #field-checkbox9:checked ~ .layers .fields-layer #field9:after {
-  content: "2";
+  content: "3";
 }
 
 #field-checkbox10:checked ~ .layers .fields-layer #field10:after {
@@ -914,11 +945,11 @@ body {
 }
 
 #field-checkbox13:checked ~ .layers .fields-layer #field13:after {
-  content: "2";
+  content: "3";
 }
 
 #field-checkbox14:checked ~ .layers .fields-layer #field14:after {
-  content: "3";
+  content: "4";
 }
 
 #field-checkbox16:checked ~ .layers .fields-layer #field16:after {
@@ -941,9 +972,6 @@ body {
   content: "2";
 }
 
-/*****************************/
-/********* COUNTERS **********/
-/*****************************/
 body {
   counter-reset: markedFieldsCount uncoveredFieldsCount;
 }
@@ -1151,14 +1179,15 @@ body {
 .game-stats {
   text-align: center;
   font-size: 12px;
-  color: white;
+  color: light-color;
   margin: 10px 0;
 }
+
 .game-stats .fields:after {
-  content: "Uncovered fields: " counter(uncoveredFieldsCount) "/16";
-}
-.game-stats .mines:after {
-  content: "Marked mines: " counter(markedFieldsCount) "/9";
+  content: "Uncovered fields: " counter(uncoveredFieldsCount) "/14";
 }
 
+.game-stats .mines:after {
+  content: "Marked mines: " counter(markedFieldsCount) "/11";
+}
 /*# sourceMappingURL=style.css.map */
