@@ -1,6 +1,12 @@
 # Web Suite Playground
 This repository holds a collection of basic web design creations
-## Index
+
+## Table Of Contents
+- Minesweeper
+- Landing Page
+- Magic 8 ball
+- Stop Watch
+- 404 Error Page
 
 ## About
 ### Minesweeper
