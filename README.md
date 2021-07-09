@@ -5,6 +5,7 @@ This repository holds a collection of basic web design creations
 - Minesweeper
 - Landing Page
 - Magic 8 ball
+- Clock
 - Stop Watch
 - 404 Error Page
 
@@ -16,10 +17,17 @@ In digital marketing, a landing page is a standalone web page, created specifica
 |  ![image](https://user-images.githubusercontent.com/75536064/124394049-305a1e80-dd1b-11eb-8928-4b4333b13c22.png) | ![image](https://user-images.githubusercontent.com/75536064/124394060-3ea83a80-dd1b-11eb-97cd-908bed9e2a75.png)  |
 ### Magic 8 ball
 The Magic 8-Ball is a plastic sphere, made to look like an eight-ball, that is used for fortune-telling or seeking advice. The user asks a yes–no question to the ball, then turns it over to reveal an answer in a window on the ball.
+
 ![image](https://user-images.githubusercontent.com/75536064/124394105-7e6f2200-dd1b-11eb-9795-bf5d51bd0068.png)
+
+### Clock
+I finally gave in to Neumorphism and made a simple clock.
+
+![image](https://user-images.githubusercontent.com/75536064/125035476-7adaf280-e0af-11eb-844e-32e6e0090b35.png)
 
 ### Stop Watch
 A stopwatch is a handheld timepiece designed to measure the amount of time that elapses between its activation and deactivation.
+
 ![image](https://user-images.githubusercontent.com/75536064/124394130-a199d180-dd1b-11eb-8d97-18108f17cb83.png)
 
 ### Minesweeper (Yet to complete)
